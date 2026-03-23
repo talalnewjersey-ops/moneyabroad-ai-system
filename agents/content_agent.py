@@ -1,135 +1,141 @@
-from agents.utils.openai_client import generate_text 
+prompt = f"""
+You are a HIGH-LEVEL finance expert writing for MoneyAbroadGuide.com.
 
-def create_article(keyword, country):
-
-    prompt = f"""
-You are a finance expert for newcomers in {country}, writing for MoneyAbroadGuide.com.
-
-Write a COMPLETE, HIGH-AUTHORITY, SEO-OPTIMIZED ARTICLE.
+Create a PREMIUM, SEO-OPTIMIZED article that can compete with NerdWallet and rank on Google.
 
 TARGET:
-- 3000 to 3500 words
-- Educational, structured, trustworthy (YMYL compliant)
-- Audience: immigrants, expats, international students
+- 3000–3500 words
+- Human, engaging, expert tone
+- Audience: newcomers, immigrants, expats
 
 TITLE:
 "{keyword} in {country} (2026 Complete Guide)"
 
 -----------------------------------
-STRUCTURE (MANDATORY)
+AUTHOR + E-E-A-T
 -----------------------------------
 
-H1: Title
+By Talal Eddaouahiri  
+Expert in finance for newcomers (USA & Canada)  
+Founder of MoneyAbroadGuide.com  
 
-Author block:
-- By Talal Eddaouahiri
-- Expert in finance for newcomers (USA & Canada)
-- Founder of MoneyAbroadGuide.com
-
-Publish date + Last updated date
+Published date: March 2026  
+Last updated: March 2026  
 
 Disclaimer:
 "This article is for educational purposes only and does not constitute financial advice."
 
 -----------------------------------
+INTRO (Hook)
+-----------------------------------
 
-INTRO (150 words)
-- Problem newcomers face
+- Emotional + real problem
 - Why this guide matters
 
 -----------------------------------
-
 H2: What is this
-(300 words)
-
 H2: How it works
-(400 words)
 
 -----------------------------------
+H2: Best banks in {country}
 
-H2: Best options in {country}
-- Real banks (RBC, TD, Scotiabank, CIBC, etc.)
-- Pros / cons
-
------------------------------------
-
-H2: Comparison Table
 Include:
+- RBC
+- TD
+- Scotiabank
+- CIBC
+
+For each:
+- pros
+- cons
+- best for
+
+-----------------------------------
+H2: Comparison Table (VERY IMPORTANT)
+
 | Bank | Monthly Fees | Requirements | Benefits | Best For |
 
 -----------------------------------
-
-H2: Visual Chart
-Explain differences (fees, benefits, accessibility)
+H2: Visual Chart (EXPLAIN differences)
 
 -----------------------------------
+H2: Real-life stories
 
-H2: Real-life stories (IMPORTANT)
-Story 1: newcomer struggling with banking
-Story 2: successful setup
-
------------------------------------
-
-H2: Why it matters for newcomers
-(300 words)
+Story 1: newcomer struggling  
+Story 2: successful case  
 
 -----------------------------------
-
 H2: Common mistakes to avoid
-(200 words)
 
 -----------------------------------
+H2: Why this matters
 
+-----------------------------------
 H2: FAQ (5 questions)
 
------------------------------------
-
-H2: Conclusion
-(150 words)
+IMPORTANT:
+Write answers clearly for Google Featured Snippets
 
 -----------------------------------
+IMAGES (MANDATORY)
 
-IMAGES (VERY IMPORTANT)
-Add 4 realistic image placeholders like:
+Add 4 realistic images:
 
 [Image: newcomer opening bank account in Canada]
-[Image: comparison of banking options]
-[Image: mobile banking app usage]
-[Image: financial planning for immigrants]
+[Image: banking comparison table visual]
+[Image: mobile banking app in use]
+[Image: financial planning discussion]
 
 -----------------------------------
+INTERNAL LINKING (MANDATORY)
 
+Add 4 internal links like:
+
+- /best-us-banks-for-foreigners/
+- /money-transfer-apps-usa/
+- /banking-fees-canada-explained/
+- /how-to-build-credit-canada/
+
+-----------------------------------
+EXTERNAL LINKS (IMPORTANT)
+
+Add 2–3 references:
+
+- Canada.ca
+- major bank websites
+- official sources
+
+-----------------------------------
+CALL TO ACTION (IMPORTANT)
+
+At the end:
+
+Encourage user to:
+- compare banks
+- read other guides
+- start building credit
+
+-----------------------------------
 SEO OPTIMIZATION
 
-- Strong H1, H2, H3 structure
-- Natural keyword usage
-- Add internal linking suggestions (4 links)
-- Add meta description (160 chars)
+- Strong H1, H2, H3
+- Natural keywords
+- Readable paragraphs
+- Bullet points
 
 -----------------------------------
+SCHEMA MARKUP (VERY IMPORTANT)
 
-SCHEMA (IMPORTANT)
+Add JSON-LD for:
 
-Include JSON-LD for:
-- Article
-- FAQ
+1. Article schema
+2. FAQ schema
 
 -----------------------------------
-
 STYLE
 
-- Human tone (not robotic)
-- Clear, simple English
-- Helpful and trustworthy
-- Avoid fluff
-
------------------------------------
-
-IMPORTANT
-
-- This is NOT a blog post
-- This is a PROFESSIONAL GUIDE
-- Must feel like NerdWallet level content
+- Human tone (VERY IMPORTANT)
+- Avoid robotic AI writing
+- Use simple and clear English
+- Engaging and trustworthy
 """
-
-    return generate_text(prompt)
