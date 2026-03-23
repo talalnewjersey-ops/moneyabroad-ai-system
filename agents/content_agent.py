@@ -1,17 +1,20 @@
 from utils.openai_client import generate_text
 
 def create_article(keyword, country):
+
     prompt = f"""
-Write a 3500-word SEO article for newcomers in {country}.
+    Write a detailed SEO article about: {keyword}
 
-Keyword: {keyword}
+    Target: newcomers in {country}
 
-Include:
-- Table of contents
-- 2 realistic stories
-- comparison table
-- FAQ
-- disclaimer
-"""
+    Requirements:
+    - Minimum 1500 words (test version)
+    - Include introduction
+    - Include sections with headings
+    - Include conclusion
+    - Make it helpful and practical
+    """
 
-    return generate_text(prompt)
+    article = generate_text(prompt)
+
+    return article
