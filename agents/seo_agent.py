@@ -1,4 +1,4 @@
-from utils.openai_client import generate_text
+from agents.utils.openai_client import generate_text
 
 def optimize_seo(article):
 
