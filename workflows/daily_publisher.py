@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from agents.content_agent import create_article
 from agents.seo_agent import optimize_seo
 from utils.wordpress import publish_post
