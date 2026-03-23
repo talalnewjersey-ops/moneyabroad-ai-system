@@ -37,7 +37,7 @@ H2: What is this
 H2: How it works
 
 -----------------------------------
-H2: Best banks in {country}
+H2: Best banks in """ + country + """
 
 Include:
 - RBC
@@ -127,7 +127,6 @@ SEO OPTIMIZATION
 SCHEMA MARKUP (VERY IMPORTANT)
 
 Add JSON-LD for:
-
 1. Article schema
 2. FAQ schema
 
