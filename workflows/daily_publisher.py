@@ -18,7 +18,7 @@ for item in articles:
 
     print("Generating:", item["kw"])
 
-    article = create_article(item["kw"])
+    article = create_article(item["kw"], "USA")
     article = optimize_seo(article)
 
     publish_post(item["kw"], article)
