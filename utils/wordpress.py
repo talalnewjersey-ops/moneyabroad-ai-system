@@ -1,3 +1,6 @@
+import requests
+import os
+
 def publish_post(title, content):
 
     url = "https://moneyabroadguide.com/wp-json/wp/v2/posts"
