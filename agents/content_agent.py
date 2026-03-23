@@ -1,3 +1,5 @@
+from agents.utils.openai_client import generate_text ✅
+
 def create_article(keyword, country):
 
     prompt = f"""
