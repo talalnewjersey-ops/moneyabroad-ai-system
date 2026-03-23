@@ -10,15 +10,15 @@ from utils.wordpress import publish_post
 print("🚀 AI SYSTEM START")
 
 articles = [
-    {"kw": "best bank account for immigrants USA 2026", "country": "USA"},
-    {"kw": "best bank account for newcomers Canada 2026", "country": "Canada"}
+    {"kw": "best bank account for immigrants USA"},
+    {"kw": "best bank account for newcomers Canada"}
 ]
 
 for item in articles:
 
     print("Generating:", item["kw"])
 
-    article = create_article(item["kw"], item["country"])
+    article = create_article(item["kw"])
     article = optimize_seo(article)
 
     publish_post(item["kw"], article)
